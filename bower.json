@@ -1,0 +1,24 @@
+{
+  "name": "zefirma",
+  "description": "zefirma",
+  "main": "web/index.php",
+  "authors": [
+    "Sasha Kosyanchuk <dedanaan00@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/AlexanderKosianchuk/zefirma",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.4.9",
+    "bootstrap": "^3.3.6",
+    "requirejs": "^2.1.22",
+    "ng-token-auth": "lynndylanhurley/ng-token-auth#^0.0.28"
+  }
+}
