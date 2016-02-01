@@ -17,6 +17,23 @@ gulp.task('scripts', function() {
         .pipe(refresh(server))
 })
 
+gulp.task('requirejs', function() {  
+    gulp.src(['bower_components/requirejs/*.js'])
+    	.pipe(uglify())
+        .pipe(concat('requirejs.min.js'))
+        .pipe(gulp.dest('web/js'))
+        .pipe(refresh(server))
+})
+
+gulp.task('angular', function() {  
+    gulp.src(['bower_components/angular/*.js',
+              'bower_components/angular-cookie/*.js'])
+    	.pipe(uglify())
+        .pipe(concat('angular.min.js'))
+        .pipe(gulp.dest('web/js'))
+        .pipe(refresh(server))
+})
+
 gulp.task('jquery', function() {  
     gulp.src(['bower_components/jquery/dist/jquery.js'])
     	.pipe(uglify())
@@ -48,10 +65,10 @@ gulp.task('lr-server', function() {
 })
 
 gulp.task('watch', function() {  
-    gulp.run('lr-server', 'jquery', 'bootstrap', 'scripts', 'sass');
+    gulp.run('lr-server', 'jquery', 'bootstrap', 'requirejs', 'angular', 'scripts', 'sass');
 
     gulp.watch('bower_components/**/*.js', function(event) {
-        gulp.run(['jquery', 'bootstrap']);
+        gulp.run(['jquery', 'bootstrap', 'requirejs', 'angular']);
     })
         
     gulp.watch('resources/js/**/*.js', function(event) {

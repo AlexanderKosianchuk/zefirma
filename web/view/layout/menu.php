@@ -14,17 +14,31 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-center">
-	        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+	      	<li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">фото <span class="sr-only">(current)</span> <span class="caret"></span></a>
+	          <ul class="dropdown-menu" style="opacity:1">
+	            <li><a href="#">свадебные фильмы</a></li>
+	            <li><a href="#">свадебные клипы</a></li>
+	            <li><a href="#">фото</a></li>
+	          </ul>
+	        </li>
 	        <li role="separator" class="divider-vertical"></li>
-	        <li><a href="#">Link</a></li>
+	        <li class="active"><a href="#">свадебные фильмы</a></li>
 	        <li role="separator" class="divider-vertical"></li>
 	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">фото <span class="sr-only">(current)</span> <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
-	            <li><a href="#">Action</a></li>
-	            <li><a href="#">Another action</a></li>
-	            <li><a href="#">Something else here</a></li>
+	            <li><a href="#">свадебные фильмы</a></li>
+	            <li><a href="#">свадебные клипы</a></li>
+	            <li><a href="#">фото</a></li>
 	          </ul>
+	        </li>
+	       	<li role="separator" class="divider-vertical"></li>
+	        <li><a href="#">контакты</a></li>
+	        <li role="separator" class="divider-vertical"></li>
+	        <li><a href="#">о нас</a></li>
+	        <li role="separator" class="divider-vertical"></li>
+	        <li><a href="#">друзья</a></li>
 	        </li>
 	      </ul>
 	      

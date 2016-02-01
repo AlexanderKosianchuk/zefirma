@@ -7,11 +7,12 @@ jQuery(document).ready(function(){
 	
 	var obj = new obj1();
 	
-	obj1.prototype.add = function(e) {
+	obj1.add = function(e) {
 		console.log('1');
 	};
 	
-	
-	
 	obj.add(1);
+	
+	
+	console.log(obj);
 });
