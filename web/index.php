@@ -1,46 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
+<?php
 
-<link type="text/css" rel="stylesheet" href="css/style.css"/>
-</head>
+// comment out the following two lines when deployed to production
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_ENV') or define('YII_ENV', 'dev');
 
-<body ng-app>
+require(__DIR__ . '/../vendor/autoload.php');
+require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
 
-<?php include ("/view/layout/header.php");?>    
-<?php include ("/view/layout/menu.php");?>
-    
-    <input type='text' ng-model='name'/>
-    hello {{name}}
-  <article>
-    <h2>Добро пожаловать!</h2>
-    <p>Рада приветствовать вас на своем сайте.</p>
-  </article>
-  
-    <article>
-    <h2>Добро пожаловать!</h2>
-    <p>Рада приветствовать вас на своем сайте.</p>
-  </article>
-  
-    <article>
-    <h2>Добро пожаловать!</h2>
-    <p>Рада приветствовать вас на своем сайте.</p>
-  </article>  <article>
-    <h2>Добро пожаловать!</h2>
-    <p>Рада приветствовать вас на своем сайте.</p>
-  </article>
-  
-<?php include ("/view/main.php");?>   
-<?php include ("/view/layout/footer.php");?>  
-  
-<script type="text/javascript" src="js/requirejs.min.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/angular.min.js"></script>
-<script type="text/javascript" src="js/all_1.min.js"></script>
+$config = require(__DIR__ . '/../config/web.php');
 
-</body>
-
-</html>
+(new yii\web\Application($config))->run();
