@@ -43,3 +43,11 @@ body {
 .wrap > .container {
 	padding: 0em 1em;
 }
+
+.col-cell-padding {
+	padding:5px;
+}
+
+.center {
+	text-align:center;
+}

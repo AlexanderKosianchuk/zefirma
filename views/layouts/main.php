@@ -4,8 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
+
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
@@ -17,6 +16,27 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="
+    	<?= Yii::t('app', 'Videographer at the wedding Kiev'); ?>
+    	<?= Yii::t('app', 'wedding videography Kiev'); ?> 
+			<?= Yii::t('app', 'from'); ?>
+    		Zefirma: 
+    		38 (093) 5294241 
+    		<?= Yii::t('app', 'wedding videography'); ?>, 
+    	<?= Yii::t('app', 'wedding video in Kiev'); ?>" />
+	<meta name="keywords" content="
+		<?= Yii::t('app', 'Wedding video'); ?>
+		<?= Yii::t('app', 'Wedding clips'); ?>
+		<?= Yii::t('app', 'videographer for the wedding'); ?>
+		<?= Yii::t('app', 'video'); ?>
+		<?= Yii::t('app', 'videography'); ?>
+		<?= Yii::t('app', 'videographer at the wedding Kiev'); ?>
+		<?= Yii::t('app', 'wedding videography Kiev'); ?>
+		<?= Yii::t('app', 'the operator to the wedding'); ?>
+	"/>
+   
+	<script type="text/javascript" src="//userapi.com/js/api/openapi.js?47"></script>
+	<script type="text/javascript">VK.init({apiId: 2798627, onlyWidgets: true});</script>
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -32,44 +52,7 @@ AppAsset::register($this);
 		</center>
 	</header>
 	
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'Zefirma',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar navbar-default',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-        	[
-        		'label' => Yii::t('app', 'Video'),
-        		'items' => [
-        				['label' => Yii::t('app', 'Wedding clips'), 'url' => ['/site/index']],
-        				['label' => Yii::t('app', 'Wedding video'), 'url' => ['/site/wedding-video']],
-        				['label' => Yii::t('app', 'Love Story'), 'url' => ['/site/love-story']],
-        				['label' => Yii::t('app', 'Different'), 'url' => ['/site/different']],
-        		],
-        	],
-        		
-        	[
-        		'label' => Yii::t('app', 'Photo'),
-        		'items' => [
-        				['label' => Yii::t('app', 'Oksana And Maxim'), 'url' => ['/site/photo/0']],
-        				['label' => Yii::t('app', 'Olya And Andrey'), 'url' => ['/site/photo/1']],
-        				['label' => Yii::t('app', 'Zhenya And Angelika'), 'url' => ['/site/photo/2']],
-        				['label' => Yii::t('app', 'Wedding In The Field'), 'url' => ['/site/photo/3']],
-        				['label' => Yii::t('app', 'Zhenya And Inna'), 'url' => ['/site/photo/4']],
-        		],
-        	],
-        	['label' => Yii::t('app', 'Contacts'), 'url' => ['/site/contacts']],
-        	['label' => Yii::t('app', 'About'), 'url' => ['/site/about']],
-        	['label' => Yii::t('app', 'Friends'), 'url' => ['/site/friends']],
-        ],
-    ]);
-    NavBar::end();
-    ?>
+    <?php require_once 'menu.php'; ?>
 
     <div class="container">
 
@@ -77,13 +60,7 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
+<?php require_once 'footer.php'; ?>
 
 <?php $this->endBody() ?>
 </body>
