@@ -4,8 +4,10 @@ $params = require(__DIR__ . '/params.php');
 
 $config = [
     'id' => 'basic',
+	'language' => 'ru-RU',
+	'sourceLanguage' => 'en-US',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'languageSwitcher'],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -37,6 +39,22 @@ $config = [
                 ],
             ],
         ],
+    	'i18n' => [
+    		'translations' => [
+    			'app*' => [
+    				'class' => 'yii\i18n\PhpMessageSource',
+    				'basePath' => '@app/messages',
+    				'sourceLanguage' => 'en-EN',
+    				'fileMap' => [
+    					'app' => 'app.php',
+    					'app/error' => 'error.php',
+    				],
+    				'on missingTranslation' =>
+    				['app\components\TranslationEventHandler',
+    					'handleMissingTranslation']
+    				],
+    			],
+    	],
     	'urlManager' => [
     		'enablePrettyUrl' => true,
     		'showScriptName' => false,
@@ -45,6 +63,9 @@ $config = [
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
     		]
+    	],
+    	'languageSwitcher' => [
+    		'class' => 'app\components\LanguageSwitcher',
     	],
         'db' => require(__DIR__ . '/db.php'),
     ],

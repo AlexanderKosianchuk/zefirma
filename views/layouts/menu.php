@@ -3,14 +3,12 @@
 	use yii\bootstrap\NavBar;
 
     NavBar::begin([
-        'brandLabel' => 'Zefirma',
-        'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar navbar-default',
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav navbar-default'],
         'items' => [
         	[
         		'label' => Yii::t('app', 'Video'),

@@ -7,6 +7,7 @@ use yii\helpers\Html;
 
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\components\LanguageSwitcher;
 
 AppAsset::register($this);
 ?>
@@ -48,10 +49,12 @@ AppAsset::register($this);
 
 	<header class='header jumbotron-header'>
 		<center>
-			<img class='jumbotron-img' src='/img/header.png'/>
+			<a href="/"><img class='jumbotron-img' src='/img/header.png'/></a>
 		</center>
 	</header>
 	
+	<?= LanguageSwitcher::Widget() ?>
+	 
     <?php require_once 'menu.php'; ?>
 
     <div class="container">
