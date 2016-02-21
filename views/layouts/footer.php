@@ -1,5 +1,20 @@
 <footer class="footer">
-    <div class="container center">
+
+        <div class="row social-row">
+        	<div class="half-width left">
+        		<div id="vk_like">
+					<script type="text/javascript">
+					VK.Widgets.Like("vk_like", {type: "button", height: 18});
+					</script>
+				</div>
+        	</div>
+        	<div class="half-width right">
+        	<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fzefirma.com.ua&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" 
+				scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:135px; height:21px;" allowTransparency="true"></iframe>
+        	</div>
+        </div>
+        
+    <div class="container center ">
 	<p>
 		<a href="/site/wedding-video"><?= Yii::t('app', 'Wedding video') ?></a> | 
 		<a href="/site/photo/0"><?= Yii::t('app', 'Photo') ?></a> | 

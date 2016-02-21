@@ -8,61 +8,48 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = 'Contact';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = Yii::t('app', 'Contacts') . ' - ' .  Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " .
+	Yii::t('app', 'Wedding videography and wedding video');
+
 ?>
 <div class="site-contact">
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
+<div class='row center'>	
+	<p><img src='/img/contact.png'></p>
+</div>
 
-        <div class="alert alert-success">
-            Thank you for contacting us. We will respond to you as soon as possible.
-        </div>
+<div class='row center'>
+    <h1><?= Html::encode(Yii::t('app', 'Contacts')) ?></h1>
+</div>
 
-        <p>
-            Note that if you turn on the Yii debugger, you should be able
-            to view the mail message on the mail panel of the debugger.
-            <?php if (Yii::$app->mailer->useFileTransport): ?>
-                Because the application is in development mode, the email is not sent but saved as
-                a file under <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-                Please configure the <code>useFileTransport</code> property of the <code>mail</code>
-                application component to be false to enable email sending.
-            <?php endif; ?>
-        </p>
+<div class='row center'>	
+<p>darinamazur@gmail.com </p>
+<p><?= Yii::t('app', 'phone') ?> 380935294241 - <?= Yii::t('app', 'Andrew'); ?></p>
+<p><?= Yii::t('app', 'phone') ?> 380934571818 - <?= Yii::t('app', 'Dasha'); ?></p>
+<p><?= Yii::t('app', 'Call from') ?>  10:00 <?= Yii::t('app', 'to') ?> 20:00</p>
+</div>
 
-    <?php else: ?>
+<div class='row center'>
+	<h1><?= Html::encode(Yii::t('app', 'Dear Friends')); ?>!</h1>
+</div>
 
-        <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us.
-            Thank you.
-        </p>
-
-        <div class="row">
-            <div class="col-lg-5">
-
-                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-
-                    <?= $form->field($model, 'name') ?>
-
-                    <?= $form->field($model, 'email') ?>
-
-                    <?= $form->field($model, 'subject') ?>
-
-                    <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
-
-                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                    ]) ?>
-
-                    <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-                    </div>
-
-                <?php ActiveForm::end(); ?>
-
-            </div>
-        </div>
-
-    <?php endif; ?>
+<div class='row justifyed'>	
+	<p><?= Yii::t('app', 'When you order a wedding videotape, 
+			you do not pay for one day of work, 
+			and for a range of services, 
+			which includes the very filming, 
+			film editing (parsing frames with two or more cameras, 
+			the further installation, not worked with sound, 
+			personal selection of music, color correction), 
+			mounting clip of the key moments of the film, 
+			the final revision for the Internet. 
+			This is a complex process that takes 15 to 25 days'); ?>.
+	</p>
+	
+	<p><?= Yii::t('app', 'We are shooting in Ukraine, Poland, Spain and other countries.
+		Flight, travel and accommodation, we pay ourselves,
+		you only pay for our work'); ?>.
+	</p>
+</div>
+    
 </div>

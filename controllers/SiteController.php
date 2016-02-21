@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\WeddingVideo;
+use app\models\Photo;
 
 class SiteController extends Controller
 {
@@ -87,15 +88,17 @@ class SiteController extends Controller
     
     public function actionFriends()
     {
-    	return $this->render('about');
+    	return $this->render('friends');
     }
     
     public function actionPhoto()
     {
     	$id = Yii::$app->request->get('id');
-    	var_dump($id);exit;
-    	return $this->render('contact', [
-            'model' => $model,
+
+    	$photos = Photo::find(['section' => $id])->all();
+    	
+    	return $this->render('photo', [
+            'photos' => $photos,
         ]);
     }
 }

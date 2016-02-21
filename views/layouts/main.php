@@ -6,10 +6,10 @@
 use yii\helpers\Html;
 
 use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
+use app\assets\BowerAsset;
 use app\components\LanguageSwitcher;
 
-AppAsset::register($this);
+BowerAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -60,7 +60,9 @@ AppAsset::register($this);
     <div class="container">
 
         <?= $content ?>
+        
     </div>
+    
 </div>
 
 <?php require_once 'footer.php'; ?>
