@@ -12,6 +12,7 @@ $this->title = Yii::t('app', 'Contacts') . ' - ' .  Yii::t('app', 'Video operato
 	Yii::t('app', 'Wedding videography and wedding video');
 
 ?>
+<div class="container">
 <div class="site-contact">
 
 <div class='row center'>	
@@ -52,4 +53,6 @@ $this->title = Yii::t('app', 'Contacts') . ' - ' .  Yii::t('app', 'Video operato
 	</p>
 </div>
     
+</div>
+
 </div>

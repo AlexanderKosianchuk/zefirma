@@ -5,11 +5,10 @@
 
 use yii\helpers\Html;
 
-use yii\widgets\Breadcrumbs;
-use app\assets\BowerAsset;
+use app\assets\AppAsset;
 use app\components\LanguageSwitcher;
 
-BowerAsset::register($this);
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -57,11 +56,7 @@ BowerAsset::register($this);
 	 
     <?php require_once 'menu.php'; ?>
 
-    <div class="container">
-
-        <?= $content ?>
-        
-    </div>
+    <?= $content ?>
     
 </div>
 

@@ -30,7 +30,22 @@ class LanguageSwitcher extends Widget
  
         parent::init();
  
-        $cookies = Yii::$app->response->cookies;
+        $session = Yii::$app->session;
+        $languageNew = Yii::$app->request->get('language');
+        if($languageNew)
+        {
+        	if(isset($this->languages[$languageNew]))
+        	{
+        		Yii::$app->language = $languageNew;
+        		$session->set('language', $languageNew);
+        	}
+        }
+        elseif($session->has('language'))
+        {
+        	Yii::$app->language = $session['language'];
+        }
+        
+        /*$cookies = Yii::$app->response->cookies;
         $languageNew = Yii::$app->request->get('language');
         if($languageNew)
         {
@@ -46,8 +61,7 @@ class LanguageSwitcher extends Widget
         elseif($cookies->has('language'))
         {
             Yii::$app->language = $cookies->getValue('language');
-        }
- 
+        }*/ 
     }
  
     public function run(){

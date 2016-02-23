@@ -23,9 +23,9 @@
 		<a href="/site/friends"><?= Yii::t('app', 'Friends') ?></a>
 	</p>
 	
-	<p>© ZEFIRMA.COM.UA 2012 | <?= Yii::t('app', 'All rights reserved') ?>. 
 	<?= Yii::t('app', 'Video operator for a wedding Kiev') ?>, 
 	<?= Yii::t('app', 'wedding videography') ?><br>
+	© ZEFIRMA.COM.UA 2012 | <?= Yii::t('app', 'All rights reserved') ?>.<br>
 	<a href="http://www.promoseo.org/">SEO <?= Yii::t('app', 'promotion') ?> <?= Yii::t('app', 'from') ?> Promoseo.org</a>
     </div>
 </footer>

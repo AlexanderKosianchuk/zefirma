@@ -1,22 +1,13 @@
 $(document).ready(function(){
 	
-	console.log("1");
-	
 	setTimeout(function(){
-		var photoContainer = $('.PhotoContainer').slick({
-			lazyLoad: 'ondemand',
-			  dots:true,
-			  infinite: true,
-			  speed: 300,
-			  variableWidth: true,
-			  centerMode: true,
-		});
+		var photoContainer = $('.slick-container')
 		
 		/*===================================*/
 		/*SLICK CAROUSEL*/
 		/*===================================*/
 
-		photoContainer.mousewheel(function(event, delta) {	
+		photoContainer.mousewheel(function(event, delta) {
 			
 			if($(document).scrollTop() > 150){
 				event.stopPropagation();

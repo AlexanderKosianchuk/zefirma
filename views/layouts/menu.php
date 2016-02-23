@@ -23,11 +23,11 @@
         	[
         		'label' => Yii::t('app', 'Photo'),
         		'items' => [
-        				['label' => Yii::t('app', 'Oksana And Maxim'), 'url' => ['/site/photo/0']],
-        				['label' => Yii::t('app', 'Olya And Andrey'), 'url' => ['/site/photo/1']],
-        				['label' => Yii::t('app', 'Zhenya And Angelika'), 'url' => ['/site/photo/2']],
-        				['label' => Yii::t('app', 'Wedding In The Field'), 'url' => ['/site/photo/3']],
-        				['label' => Yii::t('app', 'Zhenya And Inna'), 'url' => ['/site/photo/4']],
+        				['label' => Yii::t('app', 'Oksana And Maxim'), 'url' => ['/site/photo/1']],
+        				['label' => Yii::t('app', 'Olya And Andrey'), 'url' => ['/site/photo/2']],
+        				['label' => Yii::t('app', 'Zhenya And Angelika'), 'url' => ['/site/photo/3']],
+        				['label' => Yii::t('app', 'Wedding In The Field'), 'url' => ['/site/photo/4']],
+        				['label' => Yii::t('app', 'Zhenya And Inna'), 'url' => ['/site/photo/5']],
         		],
         	],
         	['label' => Yii::t('app', 'Contacts'), 'url' => ['/site/contacts']],

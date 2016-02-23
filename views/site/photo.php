@@ -5,14 +5,11 @@ use evgeniyrru\yii2slick\Slick;
 use yii\web\JsExpression;
 /* @var $this yii\web\View */
 
-$this->registerJsFile(Yii::$app->request->baseUrl.'/js/photo.js',
-		['depends' => [\yii\web\JqueryAsset::className()]]); 
-
 $this->title =  Yii::t('app', 'Photo') . " - " . Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " .
 	Yii::t('app', 'Wedding videography and wedding video');
 
 ?>
-<div class="site-index">
+<div class="site-photo">
 	<?php 
 		$items = [];
 		foreach ($photos as $photo) {
@@ -22,7 +19,7 @@ $this->title =  Yii::t('app', 'Photo') . " - " . Yii::t('app', 'Video operator f
 
     <div class="body-content">
 		 <div class="row center">
-			 <h4><?= Yii::t('app', 'Wedding clips'); ?></h4>
+			 <h4><?= Yii::t('app', 'Wedding photo'); ?></h4>
 		 </div>
 		 
 		 <div>
@@ -30,7 +27,7 @@ $this->title =  Yii::t('app', 'Photo') . " - " . Yii::t('app', 'Video operator f
         // HTML tag for container. Div is default.
         'itemContainer' => 'div',
         // HTML attributes for widget container
-        'containerOptions' => ['class' => 'container'],
+        'containerOptions' => ['class' => 'slick-container'],
         // Items for carousel. Empty array not allowed, exception will be throw, if empty 
         'items' => $items,
         // HTML attribute for every carousel item
@@ -54,3 +51,9 @@ $this->title =  Yii::t('app', 'Photo') . " - " . Yii::t('app', 'Video operator f
     </div>
 </div>
 
+<?php 
+$this->registerJsFile(Yii::$app->request->baseUrl.'/js/jquery.mousewheel.min.js',
+		['depends' => [\app\assets\BowerAsset::className()]]); 
+
+$this->registerJsFile(Yii::$app->request->baseUrl.'/js/photo.js',
+		['depends' => [\app\assets\BowerAsset::className()]]); 

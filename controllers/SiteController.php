@@ -50,8 +50,38 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-    	$iframeUrls = WeddingVideo::find()->all();
-        return $this->render('index', [ 'iframeUrls' => $iframeUrls ]);
+    	$video = WeddingVideo::findAll(['category' => 'clip']);
+        return $this->render('index', [ 'video' => $video ]);
+    }
+    
+    public function actionWeddingVideo()
+    {
+    	$video = WeddingVideo::findAll(['category' => 'video']);
+        return $this->render('video', 
+        		[ 
+        				'title' => Yii::t('app', 'Wedding Video'),
+        				'video' => $video 
+        		]);
+    }
+    
+    public function actionLoveStory()
+    {
+    	$video = WeddingVideo::findAll(['category' => 'lovestory']);
+        return $this->render('video', 
+        		[ 
+        				'title' => Yii::t('app', 'Love Story'),
+        				'video' => $video 
+        		]);
+    }
+    
+    public function actionDifferent()
+    {
+    	$video = WeddingVideo::findAll(['category' => 'different']);
+        return $this->render('video', 
+        		[ 
+        				'title' => Yii::t('app', 'Different'),
+        				'video' => $video 
+        		]);
     }
 
     public function actionLogin()
@@ -95,7 +125,7 @@ class SiteController extends Controller
     {
     	$id = Yii::$app->request->get('id');
 
-    	$photos = Photo::find(['section' => $id])->all();
+    	$photos = Photo::findAll(['section' => $id]);
     	
     	return $this->render('photo', [
             'photos' => $photos,

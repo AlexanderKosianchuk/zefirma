@@ -14,10 +14,8 @@ namespace app\assets;
 class BowerAsset extends AppAsset
 {
     public $sourcePath = '@bower';
-    public $depends = [
-        'yii\web\JqueryAsset'
-    ];
-    public $js = [
-    	'jquery.mousewheel/jquery.mousewheel' . (!YII_DEBUG ? '.min' : '') . '.js'
-    ];
+
+    public $css = [];
+    public $js = [];
+    
 }

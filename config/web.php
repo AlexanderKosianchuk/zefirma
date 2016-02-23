@@ -10,8 +10,8 @@ $config = [
     'bootstrap' => ['log', 'languageSwitcher'],
     'components' => [
         'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'bbxViAI8RptaFerVuX4QqDOtOdgDdSPh',
+        	'enableCsrfValidation' => true,
+            'cookieValidationKey' => 'bbxViAI8RptaFerV1',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
