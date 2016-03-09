@@ -177,3 +177,8 @@ body {
 		display:block !important;
 	}
 }
+
+.black-link{
+	color: black;
+	cursor: pointer;
+}

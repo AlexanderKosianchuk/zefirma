@@ -59,7 +59,7 @@ class SiteController extends Controller
     	$video = WeddingVideo::findAll(['category' => 'video']);
         return $this->render('video', 
         		[ 
-        				'title' => Yii::t('app', 'Wedding Video'),
+        				'title' => Yii::t('app', 'Wedding Movies'),
         				'video' => $video 
         		]);
     }

@@ -15,35 +15,32 @@ $this->title = Yii::t('app', 'About') . ' - ' .  Yii::t('app', 'Video operator f
 		</div>
 		
 		<div class='row justifyed'>
-			<p><?= Yii::t('app', 'Hello, we are pleased to welcome you to our website. Our names and Dasha
-		Andrew and now we talk a little about our work') ?> :)</p>
+			<p><?= Yii::t('app', 'Hello, we are glad to welcome you on our website. 
+		Our names are Dasha and Andrey and we will a little tell about our work now') ?> :)</p>
 			
-			<p><?= Yii::t('app', 'Ordering us, you will get not just a video report on your wedding day, you get
-		the opportunity to live your day not one more time,
-		experience the same emotions and feelings, and remember to smile.
-		After all, we believe that the most important thing in the wedding video to convey your mood') ?>.</p>
+			<p><?= Yii::t('app', 'Having ordered us, you receive not just video the report on your wedding, 
+		you have an opportunity to live the day yet not once, 
+		to experience the same emotions and feelings, to remember and smile. 
+		We consider that the most important to reflect your mood in wedding video') ?>.</p>
 			
-			<p><?= Yii::t('app', 'When you create a video, we put your work, your soul and love.
-		We have individual approach to each of you') ?>!</p>
+			<p><?= Yii::t('app', 'During creation of video, we put the work, the heart and soul and love. 
+		We have an individual approach to each of you') ?>!</p>
 			
-			<p><?= Yii::t('app', 'We shoot at the two cameras, which makes it possible to capture more than happy moments,
-		greater variety of angles.
-		We assemble your own film and video, make color correction, we are engaged in the selection of music
-		each individually, we are looking,
-		something new and bright that it would convey your mood and emotions, whatever song
-		suited to you'); ?>.</p>
+			<p><?= Yii::t('app', 'We work in two chambers that gives the chance to imprint more joyful moments, 
+		it is more than various foreshortenings. Ourselves mount your movie and the clip, 
+		we do color correction, 
+		we are engaged in selection of music individually to everyone'); ?>.</p>
 			
-			<p><?= Yii::t('app', 'If you have suggestions, we always listen. We will be glad to help you and
-		suggest that something sensible'); ?>.</p>
+			<p><?= Yii::t('app', 'If you have wishes, we always listen. 
+		We will be glad to help you and to give you a good advise'); ?>.</p>
 			
-			<p><?= Yii::t('app', 'Also, when taking pictures we are using stabilization system, such as glide and glide cam
-		track, further write
-		sound in the restaurant and on-site ceremony, what would it be clean and without unnecessary noise.
-		On the day of shooting, we move around by car, so you do not have to think:
-		"Where to plant operators?"'); ?> :) </p>
+			<p><?= Yii::t('app', 'Also we in addition write down a sound at restaurant 
+		and at an exit ceremony what he would be pure and without excess noise. 
+		In day of shooting we move on an individual transport, 
+		thus you don\'t need to think: "Where to put operators?"'); ?> :) </p>
 			
-			<p><?= Yii::t('app', 'We take to the creation of video of your day with trepidation and diligence,
-		inspired each of you'); ?>.</p>
+			<p><?= Yii::t('app', 'We treat creation of video of your day with special awe and diligence, 
+		being inspired by each of you.'); ?>.</p>
 		</div>
 	</div>
 

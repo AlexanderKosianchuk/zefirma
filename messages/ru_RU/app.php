@@ -10,7 +10,7 @@ return [
     'wedding videography' => 'оператор на свадьбу',
     'wedding video in Kiev' => 'свадебное видео в Киеве',
 		
-	'Wedding video' => 'Свадебное видео',
+	'Wedding movies' => 'Свадебные фильмы',
 	'Wedding clips' => 'Свадебные клипы',
 	'videographer for the wedding' => 'видеооператор на свадьбу',
 	'video' => 'видео',
@@ -23,6 +23,7 @@ return [
 	'promotion' => 'раскрутка',
 		
 	'Video' => 'Видео',
+	'Wedding Movies' => 'Свадебные Фильмы',
 	'Love Story'=> 'Love Story',
 	'Different'=> 'Разное',
 		
@@ -45,71 +46,65 @@ return [
 	'Call from' => 'Звонить c',
 	'to' => 'до',
 		
-	'Hello, we are pleased to welcome you to our website. Our names and Dasha
-		Andrew and now we talk a little about our work'	=> 
-	'Здравствуйте, мы рады приветствовать вас на нашем сайте. Нас зовут Даша и
-		Андрей и мы сейчас немного расскажем о нашей работе',
+	'Hello, we are glad to welcome you on our website. 
+		Our names are Dasha and Andrey and we will a little tell about our work now' => 
+	'Здравствуйте, мы рады приветствовать вас на нашем сайте. 
+		Нас зовут Даша и Андрей и мы сейчас немного расскажем о нашей работе',
 		
-	'Ordering us, you will get not just a video report on your wedding day, you get
-		the opportunity to live your day not one more time,
-		experience the same emotions and feelings, and remember to smile.
-		After all, we believe that the most important thing in the wedding video to convey your mood' => 
+	'Having ordered us, you receive not just video the report on your wedding, 
+		you have an opportunity to live the day yet not once, 
+		to experience the same emotions and feelings, to remember and smile. 
+		We consider that the most important to reflect your mood in wedding video' => 
 	'Заказав нас, вы получите не просто видео отчет о вашей свадьбе, вы получите 
 		возможность прожить свой день еще не один раз, 
 		испытать те же эмоции и чувства, вспомнить и улыбнуться. 
 		Ведь мы считаем, что самое главное в свадебном видео передать ваше настроение',
-		
-	'When you create a video, we put your work, your soul and love.
-		We have individual approach to each of you' => 
+				
+	'During creation of video, we put the work, the heart and soul and love. 
+		We have an individual approach to each of you' => 
 	'При создании видео, мы вкладываем свой труд, свою душу и любовь. 
 		У нас индивидуальный подход к каждому из вас',
+	
+	
+	'We work in two chambers that gives the chance to imprint more joyful moments, 
+		it is more than various foreshortenings. Ourselves mount your movie and the clip, 
+		we do color correction, 
+		we are engaged in selection of music individually to everyone' => 
+	'Мы снимаем в две камеры, что дает возможность запечатлеть больше радостных моментов, 
+		больше разнообразных ракурсов. Мы сами монтируем ваш фильм и клип, 
+		делаем цветокоррекцию, занимаемся подбором музыки индивидуально каждому, 
+		ищем, что то новое и светлое, что бы передать именно ваше настроение и эмоции, 
+		что бы песня подходила только вам',
 		
-	'We shoot at the two cameras, which makes it possible to capture more than happy moments,
-		greater variety of angles.
-		We assemble your own film and video, make color correction, we are engaged in the selection of music
-		each individually, we are looking,
-		something new and bright that it would convey your mood and emotions, whatever song
-		suited to you' => 
-	'Мы снимаем в две камеры, что дает возможность запечатлеть больше радостных моментов,
-		больше разнообразных ракурсов.
-		Мы сами монтируем ваш фильм и клип, делаем цветокоррекцию, занимаемся подбором музыки
-		индивидуально каждому, ищем,
-		что то новое и светлое, что бы передать именно ваше настроение и эмоции, что бы песня
-		подходила только вам',
-		
-	'If you have suggestions, we always listen. We will be glad to help you and
-		suggest that something sensible' => 
+	'If you have wishes, we always listen. 
+		We will be glad to help you and to give you a good advise' => 
 	'Если у вас есть пожелания, мы всегда прислушиваемся. Мы будем рады вам помочь и 
 		посоветовать что то дельное',
 		
-	'Also, when taking pictures we are using stabilization system, such as glide and glide cam
-		track, further write
-		sound in the restaurant and on-site ceremony, what would it be clean and without unnecessary noise.
-		On the day of shooting, we move around by car, so you do not have to think:
-		"Where to plant operators?"' => 
-	'Также при съемке мы используем системы стабилизации, такие как glide cam и glide 
-		track, дополнительно записываем 
-		звук в ресторане и на выездной церемонии, что бы он был чистым и без лишних шумов. 
-		В день съемки мы передвигаемся на личном транспорте, таким образом вам не нужно думать : 
-		«Куда бы посадить операторов?»',
+	'Also we in addition write down a sound at restaurant 
+		and at an exit ceremony what he would be pure and without excess noise. 
+		In day of shooting we move on an individual transport, 
+		thus you don\'t need to think: "Where to put operators?"' => 
+	'Также при съемке мы дополнительно записываем звук в ресторане и на выездной церемонии, 
+		что бы он был чистым и без лишних шумов. 
+		В день съемки мы передвигаемся на личном транспорте, 
+		таким образом вам не нужно думать : «Куда бы посадить операторов?»',
 		
-	'We take to the creation of video of your day with trepidation and diligence,
-		inspired each of you' => 
+	'We treat creation of video of your day with special awe and diligence, 
+		being inspired by each of you.' => 
 	'Мы относимся к созданию видео вашего дня с особым трепетом и усердием, 
 		вдохновляясь каждым из вас',
 	
 	'Dear Friends' => 'Дорогие друзья',
 		
-	'When you order a wedding videotape, 
-			you do not pay for one day of work, 
-			and for a range of services, 
-			which includes the very filming, 
-			film editing (parsing frames with two or more cameras, 
-			the further installation, not worked with sound, 
-			personal selection of music, color correction), 
-			mounting clip of the key moments of the film, 
-			the final revision for the Internet. 
-			This is a complex process that takes 15 to 25 days' =>
+	'When you order wedding video filming, 
+		you pay not for only one day of work, 
+		also for a complex of services which includes filming, 
+		film editing (analysis of shots from two or more cameras, 
+		installation, work with a sound, individual selection of music, 
+		color correction), installation of the clip from the key moments of the movie, 
+		final completion for the Internet. 
+		It is difficult process which takes from 15 to 25 days' =>
 	'Когда вы заказываете свадебную видеосъемку, 
 		вы платите не за один день работы, а за комплекс услуг,	
 		который включает в себя саму сьемку, 
@@ -119,9 +114,8 @@ return [
 		финальная доработка для интернета. Это сложный процесс,
 		который занимает от 15 до 25 дней',
 		
-	'We are shooting in Ukraine, Poland, Spain and other countries.
-		Flight, travel and accommodation, we pay ourselves,
-		you only pay for our work' => 
+	'We work in Ukraine, Poland, Spain and other countries. 
+		We pay ourselves flight, moving and accommodation, you pay only for our work' => 
 	'Мы снимаем в Украине, Польше, Испании и других странах.
 		Перелет, переезд и проживание мы оплачиваем сами,
 		вы платите только за нашу работу',

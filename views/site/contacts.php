@@ -35,21 +35,18 @@ $this->title = Yii::t('app', 'Contacts') . ' - ' .  Yii::t('app', 'Video operato
 </div>
 
 <div class='row justifyed'>	
-	<p><?= Yii::t('app', 'When you order a wedding videotape, 
-			you do not pay for one day of work, 
-			and for a range of services, 
-			which includes the very filming, 
-			film editing (parsing frames with two or more cameras, 
-			the further installation, not worked with sound, 
-			personal selection of music, color correction), 
-			mounting clip of the key moments of the film, 
-			the final revision for the Internet. 
-			This is a complex process that takes 15 to 25 days'); ?>.
+	<p><?= Yii::t('app', 'When you order wedding video filming, 
+		you pay not for only one day of work, 
+		also for a complex of services which includes filming, 
+		film editing (analysis of shots from two or more cameras, 
+		installation, work with a sound, individual selection of music, 
+		color correction), installation of the clip from the key moments of the movie, 
+		final completion for the Internet. 
+		It is difficult process which takes from 15 to 25 days'); ?>.
 	</p>
 	
-	<p><?= Yii::t('app', 'We are shooting in Ukraine, Poland, Spain and other countries.
-		Flight, travel and accommodation, we pay ourselves,
-		you only pay for our work'); ?>.
+	<p><?= Yii::t('app', 'We work in Ukraine, Poland, Spain and other countries. 
+		We pay ourselves flight, moving and accommodation, you pay only for our work'); ?>.
 	</p>
 </div>
     

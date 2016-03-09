@@ -14,7 +14,7 @@
         		'label' => Yii::t('app', 'Video'),
         		'items' => [
         				['label' => Yii::t('app', 'Wedding clips'), 'url' => ['/site/index']],
-        				['label' => Yii::t('app', 'Wedding video'), 'url' => ['/site/wedding-video']],
+        				['label' => Yii::t('app', 'Wedding movies'), 'url' => ['/site/wedding-video']],
         				['label' => Yii::t('app', 'Love Story'), 'url' => ['/site/love-story']],
         				['label' => Yii::t('app', 'Different'), 'url' => ['/site/different']],
         		],
