@@ -16,7 +16,7 @@
         
     <div class="container center ">
 	<p>
-		<a href="/site/wedding-video"><?= Yii::t('app', 'Wedding clips') ?></a> | 
+		<a href="/site/index"><?= Yii::t('app', 'Wedding clips') ?></a> | 
 		<a href="/site/photo/0"><?= Yii::t('app', 'Photo') ?></a> | 
 		<a href="/site/contacts"><?= Yii::t('app', 'Contacts') ?></a> | 
 		<a href="/site/about"><?= Yii::t('app', 'About') ?></a> | 

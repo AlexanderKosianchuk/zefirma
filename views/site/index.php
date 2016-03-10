@@ -15,7 +15,7 @@ $this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " 
 			 </div>
 			 
 			 <div class="row center">
-				 <a class='black-link' href='/site/wedding-video'><p><?= Yii::t('app', 'Here you can get acquainted with several options of movies,
+				 <a class='black-link' href='/site/wedding-movies'><p><?= Yii::t('app', 'Here you can get acquainted with several options of movies,
 		are included in our packages. Enjoy watching'); ?> :)</p></a>
 			 </div>
 			 

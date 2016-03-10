@@ -73,7 +73,7 @@ class LanguageSwitcher extends Widget
         {
             $temp = [];
             $temp['label'] = $language;
-            $temp['url'] = '?language='.$code;
+            $temp['url'] = Url::current(['language' => $code]);
             $temp['class'] = 'lang-menu-default';
             
             if($current == $language) {
@@ -87,12 +87,11 @@ class LanguageSwitcher extends Widget
         foreach($items as $item) {
         	$widgetStack .= 
         	Html::a($item['label'], 
-        		['/site/index'.$item['url']], 
+        		[$item['url']], 
         		['class'=>$item['class']]
         	);
         }
         $widgetStack .= Html::endTag("div");
-
         return $widgetStack;
     }
  

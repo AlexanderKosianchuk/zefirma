@@ -12,6 +12,7 @@ return [
 		
 	'Wedding movies' => 'Свадебные фильмы',
 	'Wedding clips' => 'Свадебные клипы',
+	'Family movies'=> 'Семейное видео',
 	'videographer for the wedding' => 'видеооператор на свадьбу',
 	'video' => 'видео',
 	'videography' => 'видео-сьемка',
@@ -24,7 +25,7 @@ return [
 		
 	'Video' => 'Видео',
 	'Wedding Movies' => 'Свадебные Фильмы',
-	'Love Story'=> 'Love Story',
+	'Family Movies'=> 'Семейное Видео',
 	'Different'=> 'Разное',
 		
 	'Photo' => 'Фото',

@@ -54,7 +54,7 @@ class SiteController extends Controller
         return $this->render('index', [ 'video' => $video ]);
     }
     
-    public function actionWeddingVideo()
+    public function actionWeddingMovies()
     {
     	$video = WeddingVideo::findAll(['category' => 'video']);
         return $this->render('video', 
@@ -64,12 +64,12 @@ class SiteController extends Controller
         		]);
     }
     
-    public function actionLoveStory()
+    public function actionFamilyMovies()
     {
     	$video = WeddingVideo::findAll(['category' => 'lovestory']);
         return $this->render('video', 
         		[ 
-        				'title' => Yii::t('app', 'Love Story'),
+        				'title' => Yii::t('app', 'Family Movies'),
         				'video' => $video 
         		]);
     }

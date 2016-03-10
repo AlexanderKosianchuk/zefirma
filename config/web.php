@@ -12,6 +12,7 @@ $config = [
         'request' => [
         	'enableCsrfValidation' => true,
             'cookieValidationKey' => 'bbxViAI8RptaFerV1',
+        	'baseUrl' => ''
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -58,8 +59,8 @@ $config = [
     	'urlManager' => [
     		'enablePrettyUrl' => true,
     		'showScriptName' => false,
-    		'enableStrictParsing' => false,
     		'rules'=> [
+    			'' => 'site/index',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
     		]
