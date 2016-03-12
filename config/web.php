@@ -4,14 +4,14 @@ $params = require(__DIR__ . '/params.php');
 
 $config = [
     'id' => 'basic',
-	'language' => 'ru_RU',
-	'sourceLanguage' => 'en_EN',
+	'language' => 'ru',
+	'sourceLanguage' => 'en',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log', 'languageSwitcher'],
     'components' => [
         'request' => [
-        	'enableCsrfValidation' => true,
-            'cookieValidationKey' => 'bbxViAI8RptaFerV1',
+        	'enableCsrfValidation' => false,
+            'cookieValidationKey' => 'bbxViAI8R2453asgg4534ptaFerV1',
         	'baseUrl' => ''
         ],
         'cache' => [
@@ -45,7 +45,7 @@ $config = [
     			'app*' => [
     				'class' => 'yii\i18n\PhpMessageSource',
     				'basePath' => '@app/messages',
-    				'sourceLanguage' => 'en_EN',
+    				'sourceLanguage' => 'en',
     				'fileMap' => [
     					'app' => 'app.php',
     					'app/error' => 'error.php',

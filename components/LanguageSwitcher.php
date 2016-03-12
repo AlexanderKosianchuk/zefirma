@@ -17,8 +17,8 @@ use yii\web\Cookie;
 class LanguageSwitcher extends Widget
 {
     public $languages = [
-        'ru_RU' => 'Рус',
-        'en_EN' => 'Eng'
+        'ru' => 'Рус',
+        'en' => 'Eng'
     ];
  
     public function init()
@@ -29,39 +29,21 @@ class LanguageSwitcher extends Widget
         }
  
         parent::init();
- 
-        $session = Yii::$app->session;
-        $languageNew = Yii::$app->request->get('language');
-        if($languageNew)
-        {
-        	if(isset($this->languages[$languageNew]))
-        	{
-        		Yii::$app->language = $languageNew;
-        		$session->set('language', $languageNew);
-        	}
-        }
-        elseif($session->has('language'))
-        {
-        	Yii::$app->language = $session['language'];
-        }
-        
-        /*$cookies = Yii::$app->response->cookies;
+                 
+        $cookies = $_COOKIE;
         $languageNew = Yii::$app->request->get('language');
         if($languageNew)
         {
             if(isset($this->languages[$languageNew]))
             {
                 Yii::$app->language = $languageNew;
-                $cookies->add(new Cookie([
-                    'name' => 'language',
-                    'value' => $languageNew
-                ]));
+                setcookie("language","$languageNew",time()+3600 * 24 * 30);
             }
         }
-        elseif($cookies->has('language'))
+        elseif(isset($cookies['language']))
         {
-            Yii::$app->language = $cookies->getValue('language');
-        }*/ 
+            Yii::$app->language = $cookies['language'];
+        }
     }
  
     public function run(){
