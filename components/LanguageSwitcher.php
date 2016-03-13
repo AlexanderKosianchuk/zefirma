@@ -17,8 +17,8 @@ use yii\web\Cookie;
 class LanguageSwitcher extends Widget
 {
     public $languages = [
-        'ru' => 'Рус',
-        'en' => 'Eng'
+        'ru' => 'рус',
+        'en' => 'eng'
     ];
  
     public function init()
@@ -26,6 +26,10 @@ class LanguageSwitcher extends Widget
         if(php_sapi_name() === 'cli')
         {
             return true;
+        } else {
+        	if (session_status() == PHP_SESSION_NONE) {
+			    session_start();
+			}
         }
  
         parent::init();

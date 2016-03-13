@@ -24,14 +24,14 @@ $this->title = Yii::t('app', 'Contacts') . ' - ' .  Yii::t('app', 'Video operato
 </div>
 
 <div class='row center'>	
-<p>darinamazur@gmail.com </p>
-<p><?= Yii::t('app', 'phone') ?> 380935294241 - <?= Yii::t('app', 'Andrew'); ?></p>
-<p><?= Yii::t('app', 'phone') ?> 380934571818 - <?= Yii::t('app', 'Dasha'); ?></p>
-<p><?= Yii::t('app', 'Call from') ?>  10:00 <?= Yii::t('app', 'to') ?> 20:00</p>
+<p>darinamazur@gmail.com 
+<br><?= Yii::t('app', 'phone') ?> 380935294241 - <?= Yii::t('app', 'Andrew'); ?>
+<br><?= Yii::t('app', 'phone') ?> 380934571818 - <?= Yii::t('app', 'Dasha'); ?>
+<br><?= Yii::t('app', 'Call from') ?>  10:00 <?= Yii::t('app', 'to') ?> 20:00</p>
 </div>
 
 <div class='row center'>
-	<h1><?= Html::encode(Yii::t('app', 'Dear Friends')); ?>!</h1>
+	<h4><?= Html::encode(Yii::t('app', 'Dear Friends')); ?>!</h4>
 </div>
 
 <div class='row justifyed'>	

@@ -17,7 +17,7 @@ $this->title = Yii::t('app', 'Friends') . ' - ' .  Yii::t('app', 'Video operator
 	<div class="site-contact">
 	
 	<div class='row center'>
-	    <h1><?= Html::encode(Yii::t('app', 'Our friends')) ?></h1>
+	    <h4><?= Html::encode(Yii::t('app', 'Our friends')) ?></h4>
 	</div>
 	
 	<br>

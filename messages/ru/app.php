@@ -28,7 +28,14 @@ return [
 	'Family Movies'=> 'Семейное Видео',
 	'Different'=> 'Разное',
 		
+	'video' => 'видео',
+	'wedding clips' => 'свадебные клипы',
+	'wedding movies' => 'свадебные фильмы',
+	'family movies'=> 'семейное видео',
+	'different'=> 'разное',
+		
 	'Photo' => 'Фото',
+	'photo' => 'фото',
 	'Oksana And Maxim' => 'Оксана и Максим',
 	'Olya And Andrey' => 'Оля и Андрей',
 	'Zhenya And Angelika' => 'Женя и Анжелика',
@@ -39,6 +46,10 @@ return [
 	'About' => 'О нас',
 	'Friends' => 'Друзья',
 	'Our friends' => "Наши друзья",
+		
+	'contacts' => 'контакты',
+	'about' => 'о нас',
+	'friends' => 'друзья',
 		
 	'phone' => 'тел',
 	'Andrew' => 'Андрей',

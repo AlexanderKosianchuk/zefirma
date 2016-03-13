@@ -17,10 +17,10 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout'],
+                'only' => ['logout', 'admin'],
                 'rules' => [
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout', 'admin'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -29,7 +29,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['get'],
                 ],
             ],
         ];
@@ -87,12 +87,12 @@ class SiteController extends Controller
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {
-            return $this->goHome();
+            return $this->render('admin');
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+             return $this->render('admin');
         }
         return $this->render('login', [
             'model' => $model,
@@ -104,6 +104,11 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+    
+    public function actionAdmin()
+    {
+    	return $this->render('admin');
     }
 
     public function actionContacts()

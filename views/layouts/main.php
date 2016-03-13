@@ -6,6 +6,7 @@
 use yii\helpers\Html;
 
 use app\assets\AppAsset;
+use yii\widgets\Pjax;
 use app\components\LanguageSwitcher;
 
 AppAsset::register($this);
@@ -51,7 +52,7 @@ AppAsset::register($this);
 			<a href="/"><img class='jumbotron-img' src='/img/header.png'/></a>
 		</center>
 	</header>
-	
+		
 	<?= LanguageSwitcher::Widget() ?>
 	 
     <?php require_once 'menu.php'; ?>

@@ -1,12 +1,25 @@
 body {
 	background-image: url('/img/bg.png');
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size:14px;
+	font-family: 'Courier New', 'Courier New', Courier6, monospace;
+	font-size: 14px;
+	line-height:12px;
 	overflow-x: hidden;
 }
 
 .row {
 	margin: 0px 15px;
+}
+
+h4 {
+	font-size:180%;
+	font-weight: bold;
+}
+
+h3 {
+	font-family: 'Courier New', 'Courier New', Courier6, monospace;
+	font-kerning: auto;
+	font-size: 16px;
+	font-weight: bold;
 }
 
 .jumbotron-img {
@@ -50,8 +63,23 @@ body {
     box-shadow: none;
 }
 
+.main-menu {
+    font-family: EB Garamond;
+    font-size: 16px;
+}
+
+/* navbar */
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:10px !important; 
+    padding-bottom:0 !important;
+    height: 40px;
+}
+.navbar { min-height:40px !important; }
+
 .wrap > .container {
 	padding: 0em 1em 2em;
+	font-size: 12.8px;
+    line-height: 16.64px;
 }
 
 .col-cell-padding {
@@ -100,10 +128,17 @@ body {
 .language-menu {
 	z-index:1;
 	position: absolute;
-    top: 174px;
-    padding: 10px;
+    top: 183px;
+    padding: 8px;
+    font-family: EB Garamond;
+    font-size: 16px;
 }
 
+@media (min-width: 768px) {
+	.language-menu {
+	    top: 178px;
+	}
+}
 .lang-menu-default, 
 .lang-menu-active,
 .lang-menu-active:hover, 
@@ -122,19 +157,20 @@ body {
 }
 
 .seo-text {
-	font-family: Courier New, Courier New, Courier6, monospace;
-	text-align: justify;
-	font-size: 0.8em;
+	font-family: 'Courier New', 'Courier New', Courier6, monospace;
+	font-kerning: auto;
+	font-size:12.8px;
 	margin: 3em auto 2em; 
-	padding: 1.5em; 
-	border: 1px solid #d8d8d8; 
-	background: #f9f9f9; 
-	-moz-border-radius: 4px; 
-	-webkit-border-radius: 4px; 
-	border-radius: 4px; 
-	-moz-box-shadow: inset 0 0 0 1px #fff; 
-	-webkit-box-shadow: inset 0 0 0 1px #fff; 
-	box-shadow: inset 0 0 0 1px #fff; 
+    padding: 35px;
+    border: 1px solid #d8d8d8;
+    background: #f9f9f9;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: inset 0 0 0 1px #fff;
+    -webkit-box-shadow: inset 0 0 0 1px #fff;
+    box-shadow: inset 0 0 0 1px #fff;
+    text-align: justify;
 }
 
 .slick-container {

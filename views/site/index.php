@@ -45,7 +45,7 @@ $this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " 
 	    
 	    <div class='seo-text'>
 	
-	<h4 class='center bold'><?= Yii::t('app', 'Videography wedding in Poland'); ?></h4>
+	<h3 class='center bold'><?= Yii::t('app', 'Videography wedding in Poland'); ?></h3>
 	
 	<?= Yii::t('app', 'Wedding is, of course, an exciting event for the newlyweds and their
 		loved ones. Photos - This is a memory that will remain after us,
@@ -55,9 +55,9 @@ $this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " 
 		Wedding - a romantic story with a wonderful culmination of the celebration,
 		to which invite friends and relatives.'); ?>
 	 
-	<h4 class='center bold'>
+	<h3 class='center bold'>
 	<?= Yii::t('app', 'We provide high-quality photo and video services on the territory of Ukraine and Poland'); ?>
-	</h4>
+	</h3>
 	
 	<?= Yii::t('app', 'To make your photos and videos have become really
 			wonderful memories, we use all of its professionalism and
@@ -85,11 +85,11 @@ $this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " 
 		But what would our film came out that way,
 		on its creation, we will work as a team.'); ?>
 	
-	<h4 class='center bold'>
+	<h3 class='center bold'>
 	<?= Yii::t('app', 'Creating a movie of your wedding in Poland
 		we will be sure to remove important for each bride and groom event,
 		including charges of bride and groom.'); ?>
-	</h4>
+	</h3>
 	
 	<?= Yii::t('app', 'For the bride - a dress, make-up. Fun pastime with friends. 
 			It is important to convey the atmosphere of the morning, 
@@ -119,9 +119,9 @@ $this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " 
 			This survey allows you to learn more about the photographer on your 
 			wedding day and feel more at ease in Poland (Krakow, Warsaw) or Ukraine (Kiev).'); ?>
 	
-	<h4 class='center bold'>
+	<h3 class='center bold'>
 	<?= Yii::t('app', 'Video operator for a wedding Kiev. Wedding Videography'); ?>
-	</h4>
+	</h3>
 	
 	<?= Yii::t('app', 'Any wedding is deservedly considered the most vivid and
 			solemn event for the majority of people. That is why they try to
@@ -173,9 +173,9 @@ $this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " 
 			and apart from him and a small cheerful clip in 3-5 minutes,
 			composed of the best moments of your wedding under the cheerful music.'); ?>
 	
-	<h4 class='center bold'>
+	<h3 class='center bold'>
 	<?= Yii::t('app', 'The operator at the wedding Kiev'); ?>
-	</h4>
+	</h3>
 	
 	<?= Yii::t('app', 'Wedding video in Kiev necessarily includes
 			preparing young people for the wedding ceremony, such as visiting the ceremony,
@@ -208,9 +208,9 @@ $this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " 
 			toast the guests, the first dance, the throwing of the bouquet, garter, a family home, etc.
 			What would the film had its logical conclusion.'); ?>
 	
-	<h4 class='center bold'>
+	<h3 class='center bold'>
 	<?= Yii::t('app', 'Wedding or wedding video clip'); ?>
-	</h4>
+	</h3>
 	
 	<?= Yii::t('app', 'In addition to a full-scale wedding film, there is also
 			wedding clip. Wedding video - a compilation of the best moments of your wedding,

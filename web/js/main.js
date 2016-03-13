@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	console.log("1");
+
 	$(".dropdown").on("click", function(event){
 		console.log($(event.target).parent("li").hasClass("open"));
 	    if($(event.target).parent("li").hasClass("open")) {
