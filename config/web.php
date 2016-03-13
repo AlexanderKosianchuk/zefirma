@@ -10,7 +10,7 @@ $config = [
     'bootstrap' => ['log', 'languageSwitcher'],
     'components' => [
         'request' => [
-        	'enableCsrfValidation' => false,
+        	'enableCsrfValidation' => true,
             'cookieValidationKey' => 'bbxViAI8R2453asgg4534ptaFerV1',
         	'baseUrl' => ''
         ],

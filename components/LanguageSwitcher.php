@@ -12,7 +12,7 @@ use Yii;
 use yii\base\Widget;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use yii\web\Cookie;
+use app\models\Lang;
  
 class LanguageSwitcher extends Widget
 {
@@ -26,27 +26,39 @@ class LanguageSwitcher extends Widget
         if(php_sapi_name() === 'cli')
         {
             return true;
-        } else {
-        	if (session_status() == PHP_SESSION_NONE) {
-			    session_start();
-			}
         }
- 
         parent::init();
-                 
-        $cookies = $_COOKIE;
+        
+        if (session_status() == PHP_SESSION_NONE) {
+        	session_start();
+        }
+        
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $browser = $_SERVER['HTTP_USER_AGENT'];
+        $sessionId = md5($ip . $browser);
+        
+        if (($model = Lang::findOne(['session_id' => $sessionId])) === null) {
+        	$model = new Lang();
+        }
+        
         $languageNew = Yii::$app->request->get('language');
+
         if($languageNew)
         {
             if(isset($this->languages[$languageNew]))
             {
                 Yii::$app->language = $languageNew;
-                setcookie("language","$languageNew",time()+3600 * 24 * 30);
+                
+                $model->attributes = [
+		        	'session_id' => $sessionId,
+		        	'lang' => $languageNew
+		        ];
+                $model->save();
             }
         }
-        elseif(isset($cookies['language']))
+        elseif(isset($model->lang))
         {
-            Yii::$app->language = $cookies['language'];
+            Yii::$app->language = $model->lang;
         }
     }
  
