@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\WeddingVideo;
 use app\models\Photo;
+use app\models\Admin;
 use yii\data\ActiveDataProvider;
 
 class SiteController extends Controller
@@ -18,10 +19,10 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'admin'],
+                'only' => ['logout'],
                 'rules' => [
                     [
-                        'actions' => ['logout', 'admin', 'addVideo', 'updateVideo', 'deleteVideo'],
+                        'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -86,137 +87,173 @@ class SiteController extends Controller
     }
 
     public function actionLogin()
-    {
-        if (!\Yii::$app->user->isGuest) {
-            return $this->redirect('/site/admin');
+    {    	
+    	if (Admin::checkAdminLogedIn()) {
+    		return $this->actionAdmin();
+    	}
+    	
+    	$model = new LoginForm();
+    	if ($model->load(Yii::$app->request->post()) && $model->login()) {
+    		return $this->actionAdmin();
+    	}
+    	
+    	return $this->render('login', [
+    		'model' => $model,
+    	]);
+    	
+    	//на хостинге не работают куки
+        /*if (!\Yii::$app->user->isGuest) {
+        	return $this->actionAdmin();
+            //return $this->redirect('/site/admin');
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-             return $this->redirect('/site/admin');
+        	 return $this->actionAdmin();
+             //return $this->redirect('/site/admin');
         }
         return $this->render('login', [
             'model' => $model,
-        ]);
+        ]);*/
     }
 
     public function actionLogout()
     {
         Yii::$app->user->logout();
-
+        Admin::logout();
         return $this->goHome();
     }
     
     public function actionAdmin()
     {
-    	$dataProviderClip = new ActiveDataProvider([
-    			'query' => WeddingVideo::find()->where(['category' => 'clip']),
-    			'pagination' => [
-    					'pageSize' => 50,
-    			],
-    	]);
-    	
-    	$dataProviderVideo = new ActiveDataProvider([
-    			'query' => WeddingVideo::find()->where(['category' => 'video']),
-    			'pagination' => [
-    					'pageSize' => 50,
-    			],
-    	]);
-    	
-    	$dataProviderLovestory = new ActiveDataProvider([
-    			'query' => WeddingVideo::find()->where(['category' => 'lovestory']),
-    			'pagination' => [
-    					'pageSize' => 50,
-    			],
-    	]);
-    	
-    	$dataProviderDifferent = new ActiveDataProvider([
-    			'query' => WeddingVideo::find()->where(['category' => 'different']),
-    			'pagination' => [
-    					'pageSize' => 50,
-    			],
-    	]);
-    	    	
-    	return $this->render('admin', [
-    			'dataProviderClip' => $dataProviderClip,
-    			'dataProviderVideo' => $dataProviderVideo,
-    			'dataProviderLovestory' => $dataProviderLovestory,
-    			'dataProviderDifferent' => $dataProviderDifferent    		
-    	]);
+    	if (Admin::checkAdminLogedIn()) {
+	    	$dataProviderClip = new ActiveDataProvider([
+	    			'query' => WeddingVideo::find()->where(['category' => 'clip']),
+	    			'pagination' => [
+	    					'pageSize' => 50,
+	    			],
+	    	]);
+	    	
+	    	$dataProviderVideo = new ActiveDataProvider([
+	    			'query' => WeddingVideo::find()->where(['category' => 'video']),
+	    			'pagination' => [
+	    					'pageSize' => 50,
+	    			],
+	    	]);
+	    	
+	    	$dataProviderLovestory = new ActiveDataProvider([
+	    			'query' => WeddingVideo::find()->where(['category' => 'lovestory']),
+	    			'pagination' => [
+	    					'pageSize' => 50,
+	    			],
+	    	]);
+	    	
+	    	$dataProviderDifferent = new ActiveDataProvider([
+	    			'query' => WeddingVideo::find()->where(['category' => 'different']),
+	    			'pagination' => [
+	    					'pageSize' => 50,
+	    			],
+	    	]);
+	    	    	
+	    	return $this->render('admin', [
+	    			'dataProviderClip' => $dataProviderClip,
+	    			'dataProviderVideo' => $dataProviderVideo,
+	    			'dataProviderLovestory' => $dataProviderLovestory,
+	    			'dataProviderDifferent' => $dataProviderDifferent    		
+	    	]);
+    	} else {
+    		//return $this->redirect('/site/login');
+    		return $this->actionLogin();
+    	}
     }
 
     public function actionAddVideo()
     {
-    	if (Yii::$app->request->isAjax) {
-	    	$category = Yii::$app->request->post('category');
-	    	$url = Yii::$app->request->post('value');
-	    	
-	    	if((strlen($category) > 0) && (strlen($url) > 0)) {
-	    		$WV = new WeddingVideo();
-	    		$WV->attributes = [
-    				'category' => $category,
-    				'url' => $url
-	    		];
-	    		$WV->save();
+    	if (Admin::checkAdminLogedIn()) {
+	    	if (Yii::$app->request->isAjax) {
+		    	$category = Yii::$app->request->post('category');
+		    	$url = Yii::$app->request->post('value');
+		    	
+		    	if((strlen($category) > 0) && (strlen($url) > 0)) {
+		    		$WV = new WeddingVideo();
+		    		$WV->attributes = [
+	    				'category' => $category,
+	    				'url' => $url
+		    		];
+		    		$WV->save();
+		    	}
+		    	
+		    	return json_encode([
+		    		'status' => 'ok'	
+		    	]);
+	    	} else {
+	    		return $this->render('site/error');
 	    	}
-	    	
-	    	return json_encode([
-	    		'status' => 'ok'	
-	    	]);
     	} else {
-    		return $this->render('error');
+    		//return $this->redirect('/site/login');
+    		return $this->actionLogin();
     	}
     }
     
     public function actionUpdateVideo()
     {
-    	if (Yii::$app->request->isAjax) {
-	    	$category = Yii::$app->request->post('category');
-	    	$id = Yii::$app->request->post('id');
-	    	$url = Yii::$app->request->post('value');
-	    	
-	    	if(
-    			(strlen($category) > 0) && 
-    			(strlen($url) > 0) && 
-    			(strlen($id) > 0)
-	    	  ) {
-	    		$wv = WeddingVideo::find()->where([
-					'id' => $id,
-					'category' => $category
-	    		])->one();
-	    		
-	    		$wv->url = $url;
-	    		$wv->save();
+    	if (Admin::checkAdminLogedIn()) {
+	    	if (Yii::$app->request->isAjax) {
+		    	$category = Yii::$app->request->post('category');
+		    	$id = Yii::$app->request->post('id');
+		    	$url = Yii::$app->request->post('value');
+		    	
+		    	if(
+	    			(strlen($category) > 0) && 
+	    			(strlen($url) > 0) && 
+	    			(strlen($id) > 0)
+		    	  ) {
+		    		$wv = WeddingVideo::find()->where([
+						'id' => $id,
+						'category' => $category
+		    		])->one();
+		    		
+		    		$wv->url = $url;
+		    		$wv->save();
+		    	}
+		    	
+		    	return json_encode([
+		    		'status' => 'ok'	
+		    	]);
+	    	} else {
+	    		return $this->render('site/error');
 	    	}
-	    	
-	    	return json_encode([
-	    		'status' => 'ok'	
-	    	]);
     	} else {
-    		return $this->render('error');
+    		//return $this->redirect('/site/login');
+    		return $this->actionLogin();
     	}
     }
     
     public function actionDeleteVideo()
     {
+    	if (Admin::checkAdminLogedIn()) {
         	if (Yii::$app->request->isAjax) {
-	    	$category = Yii::$app->request->post('category');
-	    	$id = Yii::$app->request->post('id');
-	    	
-	    	if((strlen($category) > 0) && (strlen($id) > 0)) {
-	    		WeddingVideo::deleteAll(
-    				[
-    					'id' => $id,
-    					'category' => $category
-    				]
-    			);
+		    	$category = Yii::$app->request->post('category');
+		    	$id = Yii::$app->request->post('id');
+		    	
+		    	if((strlen($category) > 0) && (strlen($id) > 0)) {
+		    		WeddingVideo::deleteAll(
+	    				[
+	    					'id' => $id,
+	    					'category' => $category
+	    				]
+	    			);
+		    	}
+		    	
+		    	return json_encode([
+		    		'status' => 'ok'	
+		    	]);
+	    	} else {
+	    		return $this->render('site/error');
 	    	}
-	    	
-	    	return json_encode([
-	    		'status' => 'ok'	
-	    	]);
     	} else {
-    		return $this->render('error');
+    		//return $this->redirect('/site/login');
+    		return $this->actionLogin();
     	}
     }
     

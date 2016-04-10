@@ -1,4 +1,8 @@
 $(document).ready(function(){
+	if($(location).attr('pathname') != '/site/admin') {
+		window.location.href = '/site/admin';
+	}
+	
 	var category = '';
 	$("button.btn-add-video").on("click", function(e) {
 		category = $(e.target).data('category');		
@@ -33,31 +37,36 @@ $(document).ready(function(){
 		}
 	});
 	
-	$(".url-val").on('dblclick', function(e) {
-		var item = $(e.currentTarget);
-		var id = $(item.parent()).data('key');
-		var category = $(item.parents('table')).data('category');
-		var val = item.html();
-		item.html('<input id="url-input-val" class="form-control" value="' + val + '"/>');
-		$('input#url-input-val')
-		.focus()
-		.on('focusout', function(e) {
-			if (confirm("Shure want to update this item?")) {
-				var newUrl = $(e.currentTarget).val();
-				$.post({
-					url: '/site/update-video',
-					data: {
-						category: category,
-						id: id,
-						value: newUrl
-					}
-				}).done(function(e) {
-					location.reload();
-				});
-			} else {
-				item.html(val);
-			}
-		});
+	var clicked = false;
+	$(".url-val").on('click', function(e) {
+		if(!clicked) {
+			clicked = true;
+			var item = $(e.currentTarget);
+			var id = $(item.parent()).data('key');
+			var category = $(item.parents('table')).data('category');
+			var val = item.html();
+			item.html('<input id="url-input-val" class="form-control" value="' + val + '"/>');
+			$('input#url-input-val')
+			.focus()
+			.on('focusout', function(e) {
+				if (confirm("Shure want to update this item?")) {
+					var newUrl = $(e.currentTarget).val();
+					$.post({
+						url: '/site/update-video',
+						data: {
+							category: category,
+							id: id,
+							value: newUrl
+						}
+					}).done(function(e) {
+						location.reload();
+					});
+				} else {
+					item.html(val);
+					clicked = false;
+				}
+			});
+		}
 	});
 	
 
