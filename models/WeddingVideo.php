@@ -26,8 +26,8 @@ class WeddingVideo extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['url'], 'required'],
-            [['url'], 'string'],
+            [['url', 'category'], 'required'],
+            [['url', 'category'], 'string'],
             [['url'], 'unique']
         ];
     }
