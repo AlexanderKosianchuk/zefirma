@@ -7,7 +7,7 @@ $config = [
 	'language' => 'ru',
 	'sourceLanguage' => 'en',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log', 'languageSwitcher'],
+    'bootstrap' => ['log', 'languageSwitcher', 'assetsAutoCompress'],
     'components' => [
         'request' => [
         	'enableCsrfValidation' => false,
@@ -67,6 +67,28 @@ $config = [
     	],
     	'languageSwitcher' => [
     		'class' => 'app\components\LanguageSwitcher',
+    	],
+    	'assetManager' => [
+    		'appendTimestamp' => true,
+    		'class' => 'yii\web\AssetManager',
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'sourcePath' => null,   // do not publish the bundle
+                    'js' => ['//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js']
+    			],
+            	'yii\bootstrap\BootstrapAsset' => [
+            		'sourcePath' => null,
+            		'js' => [],
+            		'css' => [],
+            	]
+			]
+        ],
+    	'assetsAutoCompress' => [
+    		'class'             => '\skeeks\yii2\assetsAuto\AssetsAutoCompressComponent',
+            'enabled'           => true,
+            'jsCompress'        => true,
+            'cssFileCompile'    => true,
+            'jsFileCompile'     => true,
     	],
         'db' => require(__DIR__ . '/db.php'),
     ],

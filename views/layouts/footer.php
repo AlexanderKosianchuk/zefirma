@@ -3,7 +3,9 @@
         <div class="row social-row">
         	<div class="half-width left">
         		<div id="vk_like">
+					<script type="text/javascript" src="//userapi.com/js/api/openapi.js?47"></script> 
 					<script type="text/javascript">
+					VK.init({apiId: 2798627, onlyWidgets: true});
 					VK.Widgets.Like("vk_like", {type: "button", height: 18});
 					</script>
 				</div>

@@ -165,6 +165,7 @@ frameborder="0" allowfullscreen></iframe>
 </div>
 
 <?php 
+$this->registerJsFile('//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js');
 $this->registerJsFile(Yii::$app->request->baseUrl.'/js/admin.js',
 		['depends' => [\app\assets\BowerAsset::className()]]); 
 ?>

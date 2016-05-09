@@ -36,13 +36,34 @@ AppAsset::register($this);
 		<?= Yii::t('app', 'the operator to the wedding'); ?>
 	"/>
    
-	<script type="text/javascript" src="//userapi.com/js/api/openapi.js?47"></script>
-	<script type="text/javascript">VK.init({apiId: 2798627, onlyWidgets: true});</script>
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
 <body>
+
+<script type="text/javascript">
+    function loadCSS(filename){ 
+       var file = document.createElement("link");
+       file.setAttribute("rel", "stylesheet");
+       file.setAttribute("type", "text/css");
+       file.setAttribute("href", filename);
+
+       if (typeof file !== "undefined")
+          document.getElementsByTagName("head")[0].appendChild(file);
+
+       window.onload = function(){
+    	   var mm = document.getElementsByClassName("main-menu")[0];
+           mm.style.display = 'block';
+
+    	   var lm = document.getElementsByClassName("language-menu")[0];
+           lm.style.display = 'block';   
+       }
+    }
+   //just call a function to load a new CSS:
+   loadCSS("//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css");
+</script>
+
 <?php $this->beginBody() ?>
 
 <div class="wrap">
@@ -64,6 +85,7 @@ AppAsset::register($this);
 <?php require_once 'footer.php'; ?>
 
 <?php $this->endBody() ?>
+	
 </body>
 </html>
 <?php $this->endPage() ?>

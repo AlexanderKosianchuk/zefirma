@@ -66,6 +66,7 @@ h3 {
 .main-menu {
     font-family: EB Garamond;
     font-size: 16px;
+    display: none;
 }
 
 /* navbar */
@@ -128,15 +129,16 @@ h3 {
 .language-menu {
 	z-index:1;
 	position: absolute;
-    top: 183px;
+    top: 178px;
     padding: 8px;
     font-family: EB Garamond;
     font-size: 16px;
+    display: none;
 }
 
 @media (min-width: 768px) {
 	.language-menu {
-	    top: 178px;
+	    top: 173px;
 	}
 }
 .lang-menu-default, 
@@ -219,4 +221,8 @@ h3 {
 .black-link{
 	color: black;
 	cursor: pointer;
+}
+
+.blackbg {
+	background-color: black;
 }

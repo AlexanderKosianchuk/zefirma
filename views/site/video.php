@@ -23,8 +23,8 @@ $this->title = $title . " ZEFIRMA " .
 		     <?php endif; ?>
 		     
 	            <div class="col-md-6 col-cell-padding">
-	            	<div class="embed-responsive embed-responsive-16by9">
-	                	<iframe class="embed-responsive-item" src="<?= $item['url']; ?>" frameborder="0" allowfullscreen></iframe>
+	            	<div class="embed-responsive embed-responsive-16by9 blackbg">
+	                	<iframe class="embed-responsive-item" data-src="<?= $item['url']; ?>" frameborder="0" allowfullscreen></iframe>
 	            	</div>
 	            </div>
 			<?php if(($ii % 2) == 1): ?>
