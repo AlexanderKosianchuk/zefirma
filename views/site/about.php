@@ -11,7 +11,7 @@ $this->title = Yii::t('app', 'About') . ' - ' .  Yii::t('app', 'Video operator f
 	<div class="site-about">
 	
 		<div class='row center'>
-		    <h4><?= Html::encode(Yii::t('app', 'About')) ?></h4>
+		    <h4></h4>
 		</div>
 		
 		<div class='row justifyed'>

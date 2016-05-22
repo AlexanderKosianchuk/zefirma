@@ -45,80 +45,6 @@ $this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " 
 	    
 	    <div class='seo-text'>
 	
-	<h3 class='center bold'><?= Yii::t('app', 'Videography wedding in Poland'); ?></h3>
-	
-	<?= Yii::t('app', 'Wedding is, of course, an exciting event for the newlyweds and their
-		loved ones. Photos - This is a memory that will remain after us,
-		and beautiful wedding photos will admire not only you,
-		but your children grandchildren, and perhaps the next generation.
-		Therefore it is very important that your wedding filmed a pro.
-		Wedding - a romantic story with a wonderful culmination of the celebration,
-		to which invite friends and relatives.'); ?>
-	 
-	<h3 class='center bold'>
-	<?= Yii::t('app', 'We provide high-quality photo and video services on the territory of Ukraine and Poland'); ?>
-	</h3>
-	
-	<?= Yii::t('app', 'To make your photos and videos have become really
-			wonderful memories, we use all of its professionalism and
-			many years of experience. Warsaw magnificent city with a unique architecture.
-			If the wedding venue you choose to Warsaw or Krakow we will find
-			wonderful location for shooting a romantic film about the history of
-			your love. Video and photos of your wedding photography in Poland - a story
-			brimming with romance and adventure, and only the power of the professionals
-			to transmit the frames.
-			Create high-quality wedding photos and video -
-			it is not a simple process. The photograph should convey the mood and atmosphere.
-			After all, it is no secret that some of the photos can watch for hours,
-			experiencing the emotions of bygone days, with the same gusto as in a moment of fixing
-			this frame, and other pictures and gathering dust on a shelf without causing any emotion.
-			To the photographer caught the very shots he should have flair and professionalism.
-			At the preliminary meeting with the customer, the photographer tries to understand the nature and
-			customer preferences. After wedding photo and video shooting - a mutually creative process.
-			After all, you are the main characters in the romantic stories,
-			the culmination of which is a big event in the life of lovers.
-			This is a wedding.'); ?>
-	 
-	<?= Yii::t('app', 'You yourself are the protagonists of a film contact,
-		in which we will display the full depth of your feelings,
-		all the tenderness and timidity of your relationship.
-		But what would our film came out that way,
-		on its creation, we will work as a team.'); ?>
-	
-	<h3 class='center bold'>
-	<?= Yii::t('app', 'Creating a movie of your wedding in Poland
-		we will be sure to remove important for each bride and groom event,
-		including charges of bride and groom.'); ?>
-	</h3>
-	
-	<?= Yii::t('app', 'For the bride - a dress, make-up. Fun pastime with friends. 
-			It is important to convey the atmosphere of the morning, 
-			the mood and your heartfelt emotions. The second stage - the wedding ceremony. 
-			This may be a wedding in a cathedral or church. 
-			This survey is always solemn and touching. 
-			And the task of the operator and editor convey these emotions and find 
-			the things that this display. Then, the solution of all walks. 
-			It was during a walk will be filmed most romantic frames. 
-			And it is very important that the operator knew the pre-planned route. 
-			You may also want to consult with the operator. 
-			Perhaps he can tell a good place by which you can get extraordinary 
-			images that will delight you later. And the culmination of the celebrations - 
-			it is, of course, a restaurant. This is a meeting of young, 
-			near and dear to people who came to congratulate the newlyweds. 
-			Today, many practice a couple Bridal session- this photo 
-			session groom and bride in beautiful places on the eve of the wedding. 
-			The wedding day and so full of emotions and often walk, 
-			which takes about two hours, does not allow to be in several 
-			places at once and spend quality photo session. 
-			And indeed the photo session - this is an additional burden for honeymooners, 
-			for whom the wedding and so difficult test. It is for this reason 
-			Bridal session - is a great alternative. Lets get beautiful photos, 
-			but if you want to please the guests, raised them as a wedding surprise. 
-			Another interesting solution is the Engagement Session - 
-			is filming young in casual clothes in expensive and memorable honeymoon locations. 
-			This survey allows you to learn more about the photographer on your 
-			wedding day and feel more at ease in Poland (Krakow, Warsaw) or Ukraine (Kiev).'); ?>
-	
 	<h3 class='center bold'>
 	<?= Yii::t('app', 'Video operator for a wedding Kiev. Wedding Videography'); ?>
 	</h3>
@@ -220,7 +146,81 @@ $this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " 
 			they have it exactly to the end of the inspection. In our time there
 			whole areas of wedding clip: love story, trash the dress,
 			concept film, glamor, gangster style, and many others.'); ?>
+	
+	<h3 class='center bold'><?= Yii::t('app', 'Videography wedding in Poland'); ?></h3>
+	
+	<?= Yii::t('app', 'Wedding is, of course, an exciting event for the newlyweds and their
+		loved ones. Photos - This is a memory that will remain after us,
+		and beautiful wedding photos will admire not only you,
+		but your children grandchildren, and perhaps the next generation.
+		Therefore it is very important that your wedding filmed a pro.
+		Wedding - a romantic story with a wonderful culmination of the celebration,
+		to which invite friends and relatives.'); ?>
+	 
+	<h3 class='center bold'>
+	<?= Yii::t('app', 'We provide high-quality photo and video services on the territory of Ukraine and Poland'); ?>
+	</h3>
+	
+	<?= Yii::t('app', 'To make your photos and videos have become really
+			wonderful memories, we use all of its professionalism and
+			many years of experience. Warsaw magnificent city with a unique architecture.
+			If the wedding venue you choose to Warsaw or Krakow we will find
+			wonderful location for shooting a romantic film about the history of
+			your love. Video and photos of your wedding photography in Poland - a story
+			brimming with romance and adventure, and only the power of the professionals
+			to transmit the frames.
+			Create high-quality wedding photos and video -
+			it is not a simple process. The photograph should convey the mood and atmosphere.
+			After all, it is no secret that some of the photos can watch for hours,
+			experiencing the emotions of bygone days, with the same gusto as in a moment of fixing
+			this frame, and other pictures and gathering dust on a shelf without causing any emotion.
+			To the photographer caught the very shots he should have flair and professionalism.
+			At the preliminary meeting with the customer, the photographer tries to understand the nature and
+			customer preferences. After wedding photo and video shooting - a mutually creative process.
+			After all, you are the main characters in the romantic stories,
+			the culmination of which is a big event in the life of lovers.
+			This is a wedding.'); ?>
+	 
+	<?= Yii::t('app', 'You yourself are the protagonists of a film contact,
+		in which we will display the full depth of your feelings,
+		all the tenderness and timidity of your relationship.
+		But what would our film came out that way,
+		on its creation, we will work as a team.'); ?>
+	
+	<h3 class='center bold'>
+	<?= Yii::t('app', 'Creating a movie of your wedding in Poland
+		we will be sure to remove important for each bride and groom event,
+		including charges of bride and groom.'); ?>
+	</h3>
+	
+	<?= Yii::t('app', 'For the bride - a dress, make-up. Fun pastime with friends. 
+			It is important to convey the atmosphere of the morning, 
+			the mood and your heartfelt emotions. The second stage - the wedding ceremony. 
+			This may be a wedding in a cathedral or church. 
+			This survey is always solemn and touching. 
+			And the task of the operator and editor convey these emotions and find 
+			the things that this display. Then, the solution of all walks. 
+			It was during a walk will be filmed most romantic frames. 
+			And it is very important that the operator knew the pre-planned route. 
+			You may also want to consult with the operator. 
+			Perhaps he can tell a good place by which you can get extraordinary 
+			images that will delight you later. And the culmination of the celebrations - 
+			it is, of course, a restaurant. This is a meeting of young, 
+			near and dear to people who came to congratulate the newlyweds. 
+			Today, many practice a couple Bridal session- this photo 
+			session groom and bride in beautiful places on the eve of the wedding. 
+			The wedding day and so full of emotions and often walk, 
+			which takes about two hours, does not allow to be in several 
+			places at once and spend quality photo session. 
+			And indeed the photo session - this is an additional burden for honeymooners, 
+			for whom the wedding and so difficult test. It is for this reason 
+			Bridal session - is a great alternative. Lets get beautiful photos, 
+			but if you want to please the guests, raised them as a wedding surprise. 
+			Another interesting solution is the Engagement Session - 
+			is filming young in casual clothes in expensive and memorable honeymoon locations. 
+			This survey allows you to learn more about the photographer on your 
+			wedding day and feel more at ease in Poland (Krakow, Warsaw) or Ukraine (Kiev).'); ?>
+	
 	    </div>
 	</div>
-
 </div>

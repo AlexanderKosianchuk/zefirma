@@ -80,6 +80,8 @@ AppAsset::register($this);
 
     <?= $content ?>
     
+    <?php require_once 'social.php'; ?>
+    
 </div>
 
 <?php require_once 'footer.php'; ?>

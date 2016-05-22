@@ -20,7 +20,7 @@ $this->title = Yii::t('app', 'Contacts') . ' - ' .  Yii::t('app', 'Video operato
 </div>
 
 <div class='row center'>
-    <h1><?= Html::encode(Yii::t('app', 'Contacts')) ?></h1>
+    <h4></h4>
 </div>
 
 <div class='row center'>	
