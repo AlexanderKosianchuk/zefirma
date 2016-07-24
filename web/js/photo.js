@@ -1,5 +1,8 @@
 $(document).ready(function(){
-	
+	initSlickMouseWheel();
+});
+
+function initSlickMouseWheel() {
 	setTimeout(function(){
 		var photoContainer = $('.slick-container')
 		
@@ -22,4 +25,15 @@ $(document).ready(function(){
 		});
 		}, 500
 	);	
-});
+};
+
+function initSlick(slickContainer) {
+	slickContainer.slick({
+		"lazyLoad":"ondemand",
+		"infinite":true,
+		"speed":300,
+		"variableWidth":true,
+		"centerMode":true,
+		"dots":true
+	});
+};

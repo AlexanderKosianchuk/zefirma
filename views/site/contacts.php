@@ -8,8 +8,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = Yii::t('app', 'Contacts') . ' - ' .  Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " .
-	Yii::t('app', 'Wedding videography and wedding video');
+$this->title = $title;
 
 ?>
 <div class="container">

@@ -1,10 +1,4 @@
 <?php
-/*
-author :: Pitt Phunsanit
-website :: http://plusmagi.com
-change language by get language=EN, language=TH,...
-or select on this widget
-*/
  
 namespace app\components;
  
@@ -28,11 +22,7 @@ class LanguageSwitcher extends Widget
             return true;
         }
         parent::init();
-        
-        if (session_status() == PHP_SESSION_NONE) {
-        	session_start();
-        }
-        
+                
         $ip = $_SERVER['REMOTE_ADDR'];
         $browser = $_SERVER['HTTP_USER_AGENT'];
         $sessionId = md5($ip . $browser);

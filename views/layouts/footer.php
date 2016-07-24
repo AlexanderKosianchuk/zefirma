@@ -1,11 +1,11 @@
 <footer class="footer">        
     <div class="container center ">
 	<p>
-		<a href="/site/index"><?= Yii::t('app', 'Wedding clips') ?></a> | 
-		<a href="/site/photo/0"><?= Yii::t('app', 'Photo') ?></a> | 
-		<a href="/site/contacts"><?= Yii::t('app', 'Contacts') ?></a> | 
-		<a href="/site/about"><?= Yii::t('app', 'About') ?></a> | 
-		<a href="/site/friends"><?= Yii::t('app', 'Friends') ?></a>
+		<a href="/site/index" data-is-spa="1"><?= Yii::t('app', 'Wedding clips') ?></a> | 
+		<a href="/site/photo/1" data-is-spa="1"><?= Yii::t('app', 'Photo') ?></a> | 
+		<a href="/site/contacts" data-is-spa="1"><?= Yii::t('app', 'Contacts') ?></a> | 
+		<a href="/site/about" data-is-spa="1"><?= Yii::t('app', 'About') ?></a> | 
+		<a href="/site/friends" data-is-spa="1"><?= Yii::t('app', 'Friends') ?></a>
 	</p>
 	
 	<?= Yii::t('app', 'Video operator for a wedding Kiev') ?>, 

@@ -5,8 +5,7 @@ use evgeniyrru\yii2slick\Slick;
 use yii\web\JsExpression;
 /* @var $this yii\web\View */
 
-$this->title =  Yii::t('app', 'Photo') . " - " . Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " .
-	Yii::t('app', 'Wedding videography and wedding video');
+$this->title = $title;
 
 ?>
 <div class="site-photo">
@@ -50,10 +49,3 @@ $this->title =  Yii::t('app', 'Photo') . " - " . Yii::t('app', 'Video operator f
 		 
     </div>
 </div>
-
-<?php 
-$this->registerJsFile(Yii::$app->request->baseUrl.'/js/jquery.mousewheel.min.js',
-		['depends' => [\app\assets\BowerAsset::className()]]); 
-
-$this->registerJsFile(Yii::$app->request->baseUrl.'/js/photo.js',
-		['depends' => [\app\assets\BowerAsset::className()]]); 

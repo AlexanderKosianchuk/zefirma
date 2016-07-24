@@ -74,11 +74,15 @@ AppAsset::register($this);
 		</center>
 	</header>
 		
-	<?= LanguageSwitcher::Widget() ?>
-	 
-    <?php require_once 'menu.php'; ?>
+	<div class='menu-row'>
+		<?= LanguageSwitcher::Widget() ?>
+		 
+	    <?php require_once 'menu.php'; ?>
+    </div>
 
-    <?= $content ?>
+	<section>
+    	<?= $content ?>
+    </section>
     
     <?php require_once 'social.php'; ?>
     

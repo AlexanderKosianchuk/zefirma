@@ -2,8 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " .
-	Yii::t('app', 'Wedding videography and wedding video');
+$this->title = $title;
 
 ?>
 <div class="container">
@@ -15,7 +14,7 @@ $this->title = Yii::t('app', 'Video operator for a wedding Kiev') . " ZEFIRMA " 
 			 </div>
 			 
 			 <div class="row center">
-				 <a class='black-link' href='/site/wedding-movies'><p><?= Yii::t('app', 'Here you can get acquainted with several options of movies,
+				 <a class='black-link' href='/site/wedding-movies' data-is-spa="1"><p><?= Yii::t('app', 'Here you can get acquainted with several options of movies,
 		are included in our packages. Enjoy watching'); ?> :)</p></a>
 			 </div>
 			 

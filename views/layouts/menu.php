@@ -13,26 +13,28 @@
         	[
         		'label' => Yii::t('app', 'video'),
         		'items' => [
-        				['label' => Yii::t('app', 'wedding clips'), 'url' => ['/site/index']],
-        				['label' => Yii::t('app', 'wedding movies'), 'url' => ['/site/wedding-movies']],
-        				['label' => Yii::t('app', 'family movies'), 'url' => ['/site/family-movies']],
-        				['label' => Yii::t('app', 'different'), 'url' => ['/site/different']],
+        				['label' => Yii::t('app', 'wedding clips'), 'url' => ['/site/index'], 'options' => ['data-is-spa' => '1'],],
+        				['label' => Yii::t('app', 'wedding movies'), 'url' => ['/site/wedding-movies'], 'options' => ['data-is-spa' => '1'],],
+        				['label' => Yii::t('app', 'family movies'), 'url' => ['/site/family-movies'], 'options' => ['data-is-spa' => '1'],],
+        				['label' => Yii::t('app', 'different'), 'url' => ['/site/different'], 'options' => ['data-is-spa' => '1'],],
         		],
+        		'options' => ['data-is-spa' => '1'],
         	],
         		
         	[
         		'label' => Yii::t('app', 'photo'),
         		'items' => [
-        				['label' => Yii::t('app', 'Oksana And Maxim'), 'url' => ['/site/photo/1']],
-        				['label' => Yii::t('app', 'Olya And Andrey'), 'url' => ['/site/photo/2']],
-        				['label' => Yii::t('app', 'Zhenya And Angelika'), 'url' => ['/site/photo/3']],
-        				['label' => Yii::t('app', 'Wedding In The Field'), 'url' => ['/site/photo/4']],
-        				['label' => Yii::t('app', 'Zhenya And Inna'), 'url' => ['/site/photo/5']],
+        				['label' => Yii::t('app', 'Oksana And Maxim'), 'url' => ['/site/photo/1'], 'options' => ['data-is-spa' => '1'],],
+        				['label' => Yii::t('app', 'Olya And Andrey'), 'url' => ['/site/photo/2'], 'options' => ['data-is-spa' => '1'],],
+        				['label' => Yii::t('app', 'Zhenya And Angelika'), 'url' => ['/site/photo/3'], 'options' => ['data-is-spa' => '1'],],
+        				['label' => Yii::t('app', 'Wedding In The Field'), 'url' => ['/site/photo/4'], 'options' => ['data-is-spa' => '1'],],
+        				['label' => Yii::t('app', 'Zhenya And Inna'), 'url' => ['/site/photo/5'], 'options' => ['data-is-spa' => '1'],],
         		],
+        		'options' => ['data-is-spa' => '1'],
         	],
-        	['label' => Yii::t('app', 'contacts'), 'url' => ['/site/contacts']],
-        	['label' => Yii::t('app', 'about'), 'url' => ['/site/about']],
-        	['label' => Yii::t('app', 'friends'), 'url' => ['/site/friends']],
+        	['label' => Yii::t('app', 'contacts'), 'url' => ['/site/contacts'], 'options' => ['data-is-spa' => '1'],],
+        	['label' => Yii::t('app', 'about'), 'url' => ['/site/about'], 'options' => ['data-is-spa' => '1'],],
+        	['label' => Yii::t('app', 'friends'), 'url' => ['/site/friends'], 'options' => ['data-is-spa' => '1'],],
         ],
     ]);
     NavBar::end();
